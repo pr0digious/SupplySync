@@ -48,11 +48,9 @@ export default function Home() {
     setPantry(pantryList)
   }
 
-
   useEffect(() => {
     updatePantry()
   }, [])
-
 
   // addItem adds items to our pantry.
   const addItem = async (item) => {
@@ -119,22 +117,6 @@ export default function Home() {
               handleClose()
             }}>Add</Button>
           </Stack>
-        </Box>
-      </Modal>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <TextField
-        id="search-bar"
-        label="Search Items"
-        variant="outlined"
-        fullWidth
-        onChange={(e) => setSearchTerm(e.target.value)}
-          />
         </Box>
       </Modal>
       <Box 
